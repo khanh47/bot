@@ -20,6 +20,9 @@ except ImportError:
 
 channel_id = "1292058301760143392" 
 token = os.getenv("DISCORD_TOKEN")
+if not token:
+    print("ERROR: DISCORD_TOKEN is not set. Add it as a repository secret.")
+    sys.exit(1)
 channel_url = "https://discord.com/channels/1287742668939464736/1292058301760143392"
 url = f"https://discordapp.com/api/v9/channels/{channel_id}/messages"
 

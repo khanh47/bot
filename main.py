@@ -275,7 +275,21 @@ def format_gem_command(gems):
 # Test notification on startup
 # notify_captcha()  # Uncomment this line to test if notification works
 
+# Track start time for controlled execution (run for ~50 minutes)
+start_time = time.time()
+max_runtime_seconds = 50 * 60  # 50 minutes
+
 while True:
+    # Check if we've exceeded the maximum runtime
+    elapsed_time = time.time() - start_time
+    if elapsed_time >= max_runtime_seconds:
+        elapsed_minutes = int(elapsed_time // 60)
+        separator = "=" * 50
+        print(f"\n{separator}")
+        print(f"⏱️  Time limit reached: {elapsed_minutes} minutes elapsed")
+        print(f"Exiting gracefully to avoid workflow timeout...")
+        print(f"{separator}\n")
+        break
     message = "oh"
     header = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.6045.105 Safari/537.36",

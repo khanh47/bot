@@ -37,3 +37,4 @@ ENV/
 Thumbs.db
 
 local_token.txt
+__pycache__

@@ -55,7 +55,7 @@ def main():
             print("Pausing requests until captcha is resolved...")
             wait_for_captcha_resolution(token, max_wait_minutes=360)  # Wait up to 6 hours
        
-        if riel_count % 10 == 0 and riel_count > 0:
+        if riel_count % 10 == 0:
             # Check which gems are currently active
             print("Checking active gems...")
             active_gem_types = check_active_gems(token)

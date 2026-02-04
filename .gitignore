@@ -37,4 +37,5 @@ ENV/
 Thumbs.db
 
 local_token.txt
+local_notify_token.txt
 __pycache__

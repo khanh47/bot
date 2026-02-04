@@ -36,8 +36,8 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 
 # ===== BOT CONFIGURATION =====
 # Time range between iterations (in seconds)
-ITERATION_WAIT_MIN = 15
-ITERATION_WAIT_MAX = 30
+ITERATION_WAIT_MIN = 30 
+ITERATION_WAIT_MAX = 60 
 
 # Time range for short breaks after 30 messages (in seconds)
 SHORT_BREAK_MIN = 60

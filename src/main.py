@@ -54,6 +54,7 @@ def main():
             print("\n⚠️  CAPTCHA DETECTED! ⚠️")
             print("Pausing requests until captcha is resolved...")
             wait_for_captcha_resolution(token, max_wait_minutes=360)  # Wait up to 6 hours
+            continue
        
         if riel_count % 10 == 0:
             # Check which gems are currently active
